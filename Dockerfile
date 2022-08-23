@@ -3,7 +3,7 @@ FROM flink:1.15.1
 # install python3: it has updated Python to 3.9 in Debian 11 and so install Python 3.7 from source
 # it currently only supports Python 3.6, 3.7 and 3.8 in PyFlink officially.
 
-COPY ./sources.list /etc/apt/sources.list
+#COPY ./sources.list /etc/apt/sources.list
 
 RUN cat /etc/apt/sources.list
 RUN rm -Rf /var/lib/apt/lists/*
@@ -26,8 +26,8 @@ rm -rf /var/lib/apt/lists/*
 # install PyFlink
 
 
-RUN pip3 install -i https://pypi.douban.com/simple/ -U pip && \
-pip3 config set global.index-url https://pypi.douban.com/simple/
+#RUN pip3 install -i https://pypi.douban.com/simple/ -U pip && \
+#pip3 config set global.index-url https://pypi.douban.com/simple/
 
 COPY apache-flink*.tar.gz /
 RUN pip3 install /apache-flink-libraries*.tar.gz && pip3 install /apache-flink*.tar.gz && pip3 install jupyter
