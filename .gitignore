@@ -1,2 +1,10 @@
+<<<<<<< HEAD
 /apache-flink-1.15.1.tar.gz
 /apache-flink-libraries-1.15.1.tar.gz
+.vscode/settings.json
+=======
+/apache-flink-1.15.1.tar.gz
+/apache-flink-libraries-1.15.1.tar.gz
+>>>>>>> parent of 30a6256 (update to 1.15.2)
+apache-flink-libraries-1.15.2.tar.gz
+apache-flink-1.15.2.tar.gz
