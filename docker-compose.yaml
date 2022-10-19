@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 version: "2.2"
 services:
   jobmanager:
@@ -23,30 +22,4 @@ services:
       - |
         FLINK_PROPERTIES=
         jobmanager.rpc.address: jobmanager
-=======
-version: "2.2"
-services:
-  jobmanager:
-    image: pyflink-jupyter:1.15.1
-    volumes:
-    - ./:/home/pyflink
-    ports:
-      - "8081:8081"
-      - "8888:8888"
-    command: jobmanager 
-    environment:
-      - |
-        FLINK_PROPERTIES=
-        jobmanager.rpc.address: jobmanager
-  taskmanager:
-    image: pyflink-jupyter:1.15.1
-    depends_on:
-      - jobmanager
-    command: taskmanager
-    scale: 1
-    environment:
-      - |
-        FLINK_PROPERTIES=
-        jobmanager.rpc.address: jobmanager
->>>>>>> parent of 30a6256 (update to 1.15.2)
         taskmanager.numberOfTaskSlots: 2
