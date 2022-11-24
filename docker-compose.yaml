@@ -1,7 +1,7 @@
 version: "2.2"
 services:
   jobmanager:
-    image: pyflink-jupyter:1.15.1
+    image: pyflink-docker:1.15.2
     volumes:
     - ./:/home/pyflink
     ports:
